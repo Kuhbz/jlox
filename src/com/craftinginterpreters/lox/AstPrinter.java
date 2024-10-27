@@ -17,6 +17,18 @@ class AstPrinter implements Expr.Visitor<String> {
                 expr.left, expr.right);
     }
 
+    /**为了能够正常运行**/
+    @Override
+    public String visitCallExpr(Expr.Call expr) {
+        return "";
+    }
+
+    /**为了能够正常运行**/
+    @Override
+    public String visitGetExpr(Expr.Get expr) {
+        return "";
+    }
+
     @Override
     public String visitGroupingExpr(Expr.Grouping expr) {
         return parenthesize("group", expr.expression);
@@ -31,6 +43,24 @@ class AstPrinter implements Expr.Visitor<String> {
     /**为了能够正常运行**/
     @Override
     public String visitLogicalExpr(Expr.Logical expr) {
+        return "";
+    }
+
+    /**为了能够正常运行**/
+    @Override
+    public String visitSetExpr(Expr.Set expr) {
+        return "";
+    }
+
+    /**为了能够正常运行**/
+    @Override
+    public String visitSuperExpr(Expr.Super expr) {
+        return "";
+    }
+
+    /**为了能够正常运行**/
+    @Override
+    public String visitThisExpr(Expr.This expr) {
         return "";
     }
 
